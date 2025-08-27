@@ -39,21 +39,22 @@ source venv/bin/activate
 ```
 
 4. **Install dependencies**
-
+```bash
 pip install -r requirements.txt
 
-
+```
 5. **Run the Flask app**
-
+```bash
 python app.py
-
+```
 
 6. **Open in browser**
+```bash
 Go to http://127.0.0.1:5000
  to access the application.
-
-7. **Example Input/Output**
-
+```
+8. **Example Input/Output**
+```bash
 Input:
 
 Time: 10000  
@@ -72,3 +73,4 @@ Prediction: Fraudulent Transaction
 or
 
 Prediction: Legitimate Transaction
+```

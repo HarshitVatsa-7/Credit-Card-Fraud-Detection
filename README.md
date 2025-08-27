@@ -22,3 +22,5 @@ The app provides a simple web interface where users can input transaction featur
 ```bash
 git clone https://github.com/yourusername/credit-card-fraud-detection.git
 cd credit-card-fraud-detection
+
+2.Create a virtual environment (recommended)

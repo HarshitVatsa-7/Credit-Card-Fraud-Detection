@@ -75,5 +75,6 @@ or
 Prediction: Legitimate Transaction
 ```
 ![Alt text](images/Screenshot1.png)
+![Alt text](images/Screenshot2.png)
 
 ```

@@ -2,45 +2,149 @@
 <html>
 <head>
     <title>Credit Card Fraud Detection</title>
+    <style>
+                body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding-top: 50px;
+        }
+
+        /* Main heading h4 */
+        h4 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #007bff;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* Sub-heading h2 */
+        h2 {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+
+        /* Prediction result h3 */
+        h3 {
+            text-align: center;
+            margin-top: 20px;
+            color: #28a745;
+            font-size: 20px;
+        }
+
+        /* Form container */
+        form {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            width: 450px;
+            max-width: 90%;
+        }
+
+        /* Input fields */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border-radius: 6px;
+            border: 1px solid #ced4da;
+            box-sizing: border-box;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0,123,255,0.5);
+        }
+
+        /* Submit button */
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive grid for inputs */
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        /* For single column inputs like Time and Amount */
+        .full-width {
+            grid-column: span 2;
+        }
+
+    </style>
 </head>
 <body>
-    <h2>Enter Transaction Details</h2>
+    <h4>Credit Card Fraud Detection</h4>
     <form action="/predict" method="post">
-        Time: <input type="text" name="Time"><br>
-        V1: <input type="text" name="V1"><br>
-        V2: <input type="text" name="V2"><br>
-        V3: <input type="text" name="V3"><br>
-        V4: <input type="text" name="V4"><br>
-        V5: <input type="text" name="V5"><br>
-        V6: <input type="text" name="V6"><br>
-        V7: <input type="text" name="V7"><br>
-        V8: <input type="text" name="V8"><br>
-        V9: <input type="text" name="V9"><br>
-        V10: <input type="text" name="V10"><br>
-        V11: <input type="text" name="V11"><br>
-        V12: <input type="text" name="V12"><br>
-        V13: <input type="text" name="V13"><br>
-        V14: <input type="text" name="V14"><br>
-        V15: <input type="text" name="V15"><br>
-        V16: <input type="text" name="V16"><br>
-        V17: <input type="text" name="V17"><br>
-        V18: <input type="text" name="V18"><br>
-        V19: <input type="text" name="V19"><br>
-        V20: <input type="text" name="V20"><br>
-        V21: <input type="text" name="V21"><br>
-        V22: <input type="text" name="V22"><br>
-        V23: <input type="text" name="V23"><br>
-        V24: <input type="text" name="V24"><br>
-        V25: <input type="text" name="V25"><br>
-        V26: <input type="text" name="V26"><br>
-        V27: <input type="text" name="V27"><br>
-        V28: <input type="text" name="V28"><br>
-        Amount: <input type="text" name="Amount"><br><br>
-        <input type="submit" value="Predict">
-    </form>
+        <h2>Enter Transaction Details</h2>
 
-    {% if prediction_text %}
-        <h3>{{ prediction_text }}</h3>
-    {% endif %}
+        Time: <input type="text" name="Time">
+        V1: <input type="text" name="V1">
+        V2: <input type="text" name="V2">
+        V3: <input type="text" name="V3">
+        V4: <input type="text" name="V4">
+        V5: <input type="text" name="V5">
+        V6: <input type="text" name="V6">
+        V7: <input type="text" name="V7">
+        V8: <input type="text" name="V8">
+        V9: <input type="text" name="V9">
+        V10: <input type="text" name="V10">
+        V11: <input type="text" name="V11">
+        V12: <input type="text" name="V12">
+        V13: <input type="text" name="V13">
+        V14: <input type="text" name="V14">
+        V15: <input type="text" name="V15">
+        V16: <input type="text" name="V16">
+        V17: <input type="text" name="V17">
+        V18: <input type="text" name="V18">
+        V19: <input type="text" name="V19">
+        V20: <input type="text" name="V20">
+        V21: <input type="text" name="V21">
+        V22: <input type="text" name="V22">
+        V23: <input type="text" name="V23">
+        V24: <input type="text" name="V24">
+        V25: <input type="text" name="V25">
+        V26: <input type="text" name="V26">
+        V27: <input type="text" name="V27">
+        V28: <input type="text" name="V28">
+        Amount: <input type="text" name="Amount">
+
+        <input type="submit" value="Predict">
+
+        {% if prediction_text %}
+            <h3>{{ prediction_text }}</h3>
+        {% endif %}
+    </form>
 </body>
 </html>

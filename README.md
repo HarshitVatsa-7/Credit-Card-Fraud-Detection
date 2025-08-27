@@ -73,4 +73,7 @@ Prediction: Fraudulent Transaction
 or
 
 Prediction: Legitimate Transaction
+
+![Alt text](images/Screenshot 1.png)
+
 ```

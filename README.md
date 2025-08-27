@@ -17,14 +17,13 @@ The app provides a simple web interface where users can input transaction featur
 ---
 
 ## Installation & Setup
-
 1. **Clone the repository**
-```bash
+ bash
 git clone https://github.com/yourusername/credit-card-fraud-detection.git
 cd credit-card-fraud-detection
 
-2. **Create a virtual environment (recomended)**
-```bash
+2. **Create a virtual environment (recommended)**
+bash
 python -m venv venv
 
 3. **Activate the virtual environment**

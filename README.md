@@ -23,11 +23,11 @@ The app provides a simple web interface where users can input transaction featur
 git clone https://github.com/yourusername/credit-card-fraud-detection.git
 cd credit-card-fraud-detection
 
-2. **Create a virtual environment (recommended)**
+2. **Create a virtual environment (recomended)**
 ```bash
 python -m venv venv
 
-3. Activate the virtual environment
+3. **Activate the virtual environment**
 
 Windows:
 
@@ -39,21 +39,21 @@ Mac/Linux:
 source venv/bin/activate
 
 
-4. Install dependencies
+4. **Install dependencies**
 
 pip install -r requirements.txt
 
 
-5. Run the Flask app
+5. **Run the Flask app**
 
 python app.py
 
 
-6. Open in browser
+6. **Open in browser**
 Go to http://127.0.0.1:5000
  to access the application.
 
-7. Example Input/Output
+7. **Example Input/Output**
 
 Input:
 
@@ -65,7 +65,7 @@ V3: 2.53634673796914
 Amount: 149.62
 
 
-8. Output:
+Output:
 
 Prediction: Fraudulent Transaction
 
